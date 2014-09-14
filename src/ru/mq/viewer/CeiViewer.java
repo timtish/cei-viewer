@@ -22,7 +22,7 @@ public class CeiViewer extends JApplet {
 		
 	public static void main(String[] args) throws Exception {
 		Options options = new Options();
-		options.addParameter("s", "server address", "server address or host name (default 127.0.0.1)");
+		options.addParameter("s", "server-address", "server address or host name (default 127.0.0.1)");
 		options.addParameter("p", "port", "port number (default 1414)");
 		options.addParameter("m", "queue-manager-name", "Queue manager name (default SVR.QM)");
 		options.addParameter("c", "channel-name", "Channel name (default SYSTEM.ADMIN.SVRCONN)");

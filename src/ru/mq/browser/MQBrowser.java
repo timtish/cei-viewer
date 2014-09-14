@@ -14,15 +14,11 @@ public class MQBrowser {
 
 	private Map<String, Queue> queues = new HashMap<String, Queue>();
 	
-	public MQBrowser(String host, int port, String qmName, String channelName) throws HeadlessException {
+	public MQBrowser(String host, int port, String qmName, String channelName) throws HeadlessException, MQException {
 		MQEnvironment.hostname = host;
 		MQEnvironment.port = port;
 		MQEnvironment.channel = channelName;
-	    try {
-			qMgr = new MQQueueManager(qmName);
-		} catch (MQException e) {
-			e.printStackTrace();
-		}
+		qMgr = new MQQueueManager(qmName);
 	}
 
 	public void close() {
